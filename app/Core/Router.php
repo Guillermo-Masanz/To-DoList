@@ -12,7 +12,22 @@
                     break;
 
                 case "NewTask":
-                    require_once realpath( __DIR__ . '/../Views/Vista_NewTask.php' );
+                    require_once realpath( __DIR__ . '/../Controllers/NewTaskController.php' );
+                    $controller = new NewTaskController();
+                    $controller = $controller->index();
+                    break;
+
+                case "Completed":
+                    require_once realpath( __DIR__ . '/../Controllers/CompletedController.php' );
+                    $controller = new CompletedController();
+                    $controller = $controller->index();
+                    break;
+
+                case "Delete":
+                    require_once realpath( __DIR__ . '/../Controllers/DeleteController.php' );
+                    $controller = new DeleteController();
+                    $controller = $controller->index();
+                    break;
 
                 case "ServiceDown":
                     require_once realpath(__DIR__ . '/../Views/Vista_ServiceDown.php');

@@ -56,6 +56,10 @@ button,
     }
 }
 
+textarea {
+    resize: none;
+}
+
 /* ****************************** */
 /* ********* CABECERA *********** */
 /* ****************************** */
@@ -99,10 +103,139 @@ button,
 /* **************************** */
 /* ********* CUERPO *********** */
 /* **************************** */
-.cuerpo {
-    width: 95%;
-    height: 100vh;
+.cuerpo > h1 {
+    font-family: 'Inconsolata';
+    width: fit-content;
     margin: 2vh auto;
+    color: #A4161A;
+    font-size: 5vh;
+}
+
+.tarjeta {
+    width: 95%;
+    margin: 0.8vh auto;
+    border-radius: 0.8vh;
     background-color: #adb5bd;
-    border-radius: 0.4vw;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    padding: 0.8vh 0;
+}
+
+.tarjeta * {
+    margin: 1.2vh 2vw;
+    font-family: 'Inconsolata';
+}
+
+.tarjeta h1 {
+    color: #A4161A;
+    font-size: 4vh;
+}
+
+.tarjeta p {
+    color: #161A1D;
+    font-weight: bold;
+    font-size: 1.6vh;
+}
+
+p.estadoPendiente {
+    color: #FF5400;
+    font-size: 1.2vh;
+    margin-bottom: 0;
+}
+
+p.estadoCompletado {
+    color: #007200;
+    font-size: 1.2vh;
+    margin-bottom: 0;
+}
+
+.botones {
+    align-self: flex-end;
+}
+
+.botones a {
+    font-weight: bold;
+    font-size: 1.4vh;
+}
+
+.delete {
+    color: #A4161A;
+}
+
+/* ******************************** */
+/* ********* FORMULARIO *********** */
+/* ******************************** */
+.formulario {
+    background: #F8F9FA;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2vh auto;
+    width: 40vw;
+    border-radius: 0.8vh;
+}
+
+.formulario form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    width: 100%;
+}
+
+.formulario * {
+    font-family: 'Inconsolata';
+}
+
+.formulario label {
+    font-weight: bold;
+    font-size: 1.6vh;
+    display: inline-block;
+    width: 90%;
+    margin: 1vh;
+}
+
+.formulario input[type='text'], .formulario textarea {
+    width: 90%;
+    border-radius: 0.4vh;
+    box-shadow: 0 2px 8px #161A1D88;
+    padding: 1vw;
+}
+
+.formulario input[type='text'] {
+    height: 2.6vh;
+}
+
+.formulario input[type='text']:focus, .formulario textarea:focus {
+    box-shadow: 0 8px 12px 6px #161A1D88;
+    outline: none;
+    transition: box-shadow linear 0.4s;
+}
+
+.obligatorio {
+    color: #BA181B;
+}
+
+.formulario form input[type='submit'] {
+    margin: 1vh;
+    background-color: #007BFF;
+    color: #F8F9FA;
+    font-size: 1.6vh;
+    width: 40%;
+    height: 2vh;
+    border-radius: 1vw;
+
+}
+
+.formulario form input[type='submit']:hover {
+    cursor: pointer;
+    background-color: #0056b3;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.formulario span.error {
+    color: #BA181B;
+    font-size: 1.2vh;
+    font-style: italic;
+    width: 88%;
+    margin: 0.8vh auto;
 }
