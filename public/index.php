@@ -5,6 +5,6 @@
     $page = (isset($_GET['pag'])) ? $_GET['pag'] : 'inicio';
 
     $router = new Router();
-    $router = $router->route($page);
+    $router->route($page);
 
 ?>

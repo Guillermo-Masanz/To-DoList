@@ -8,25 +8,25 @@
                 case "inicio":
                     require_once realpath( __DIR__ . '/../Controllers/InicioController.php' );
                     $controller = new InicioController();
-                    $controller = $controller->index();
+                    $controller->index();
                     break;
 
                 case "NewTask":
                     require_once realpath( __DIR__ . '/../Controllers/NewTaskController.php' );
                     $controller = new NewTaskController();
-                    $controller = $controller->index();
+                    $controller->index();
                     break;
 
                 case "Completed":
                     require_once realpath( __DIR__ . '/../Controllers/CompletedController.php' );
                     $controller = new CompletedController();
-                    $controller = $controller->index();
+                    $controller->index();
                     break;
 
                 case "Delete":
                     require_once realpath( __DIR__ . '/../Controllers/DeleteController.php' );
                     $controller = new DeleteController();
-                    $controller = $controller->index();
+                    $controller->index();
                     break;
 
                 case "ServiceDown":
