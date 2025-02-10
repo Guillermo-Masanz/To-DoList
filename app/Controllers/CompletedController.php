@@ -7,12 +7,10 @@
 
             if ( isset($_GET['id']) ) {
                 $CompletedModel = new CompletedModel();
-                $completed = $CompletedModel->setCompleted($_GET['id']);
+                $CompletedModel->setCompleted($_GET['id']);
                 header('Location: index.php?pag=inicio');
             }
-
         }
-
     }
 
 ?>

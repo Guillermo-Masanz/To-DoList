@@ -4,10 +4,10 @@ USE todo_list;
 
 DROP TABLE IF EXISTS tasks;
 CREATE TABLE tasks (
-	id INT AUTO_INCREMENT,
-    title VARCHAR(255),
-    description TEXT,
-    completed TINYINT,
+	ID INT AUTO_INCREMENT,
+    Title VARCHAR(255),
+    Description TEXT,
+    Completed TINYINT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT pk_tasks PRIMARY KEY (id)
 )
